@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>fbnp</id>
+    <name>Федеральная база неблагонадёжных покупателей Российской Федерации</name>
+    <description>На странице заказа будет осуществлён запросу в баз данных и отображен результат</description>
+    <version>1.0</version>
+    <priority>4294967294</priority>
+    <position>0</position>
+    <status>active</status>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <settings edition_type="ROOT,ULT:VENDOR">
+        <sections>
+            <section id="general">
+                <name>Настройки</name>
+                <items>
+                    <item id="login">
+                        <type>input</type>
+                        <name>Пользователь</name>
+                    </item>
+                    <item id="password">
+                        <type>input</type>
+                        <name>Пароль</name>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>    
+    <default_language>ru</default_language>
+</addon>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>ship_extended</id>
+    <name>Расширение способов доставки</name>
+    <description>Добавляет расширенное описание для способа доставки и отображает его на странице оформления заказа</description>
+    <version>1.0</version>
+    <priority>4294967294</priority>
+    <position>0</position>
+    <status>active</status>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <default_language>ru</default_language>
+
+    <settings edition_type="ROOT,ULT:VENDOR">
+         <sections>
+            <section id="general">
+                <name>Настройки модуля</name>
+                    <items>
+                        <item id="view_type">
+                        <type>radiogroup</type>
+                        <name>Вид отображения полного описания</name>
+                        <tooltip>Как будет отображено полное описание на странице оформления заказа</tooltip>
+                        <default_value>click</default_value>
+                        <variants>
+                            <item id="click">
+                                <name>Ссылка "Показать больше" открывающая блок</name>
+                             </item>
+                            <item id="tooltip">
+                                <name>Всплывающая подсказка</name>                        
+                            </item>
+                        </variants>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+    <queries>
+        <item for="install">
+            ALTER TABLE  `?:shipping_descriptions` ADD `full_description` MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+        </item>
+        <item for="uninstall">ALTER TABLE  `?:shipping_descriptions` DROP  `full_description` ;</item>
+    </queries>
+
+    <translations>
+    </translations>
+</addon>

@@ -24,13 +24,16 @@ if ($mode == 'details') {
     $password = Registry::get('addons.fbnp.password');
 
     if(!empty($login) && !empty($password)) {
+    	$phone = str_replace(array(' ','-'), '', $order_info['s_phone']);
+    	$phone = substr($order_info['s_phone'], -6);
+
 		$url = 'http://www.fbnp.ru/bd?';
 		$url .= 'l=' . Registry::get('addons.fbnp.login');
 		$url .= '&p=' . Registry::get('addons.fbnp.password');
 		$url .= '&f=' . $order_info['s_lastname'] ;
 		$url .= '&i=' . $order_info['s_firstname'] ;
 		$url .= '&o=' ;
-		$url .= '&t=' . $order_info['s_phone'] ;
+		$url .= '&t=' . $phone ;
 		$url .= '&c=' . $order_info['s_city'];
 
 		$fbnp_result = fn_get_contents($url);

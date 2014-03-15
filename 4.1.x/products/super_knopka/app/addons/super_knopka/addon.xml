@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>super_knopka</id>
+    <name>Супер кнопка</name>
+    <description>Кнопка которая может многое</description>
+    <version>1.0</version>
+    <priority>4294967291</priority>
+    <position>0</position>
+    <status>active</status>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <default_language>ru</default_language>
+    <language_variables>
+<item lang="ru" id="super_knopka.options_to_features.title">Супер кнопки</item>
+<item lang="ru" id="super_knopka.options_to_features.button">Старт</item>
+<item lang="ru" id="super_knopka.options_to_features.tooltip">Кнопка просканирует все товары и превратит параметры в характеристики. Может занять время.</item>
+<item lang="ru" id="super_knopka.options_to_features">Превратить параметры в характеристики</item>
+    </language_variables>
+</addon>
+
+

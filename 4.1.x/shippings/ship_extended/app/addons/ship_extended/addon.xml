@@ -36,11 +36,17 @@
 
     <queries>
         <item for="install">
-            ALTER TABLE  `?:shipping_descriptions` ADD `full_description` MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+            ALTER TABLE  `?:shipping_descriptions` ADD `full_description` MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+        </item>
+        <item for="install">
+            ALTER TABLE  `?:shippings` ADD `disable_payments` varchar(255) NOT NULL DEFAULT '0';
         </item>
         <item for="uninstall">ALTER TABLE  `?:shipping_descriptions` DROP  `full_description` ;</item>
+        <item for="uninstall">ALTER TABLE  `?:shippings` DROP  `disable_payments` ;</item>
     </queries>
-
     <translations>
     </translations>
+    <language_variables>
+        <item lang="ru" id="ship_extended.disable_payments">Заблокировать способы оплаты</item>
+    </language_variables>
 </addon>

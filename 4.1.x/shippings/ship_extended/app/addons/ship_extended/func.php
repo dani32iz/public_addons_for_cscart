@@ -17,3 +17,34 @@ function fn_ship_extended_calculate_cart_taxes_pre($cart, $cart_products, &$prod
 }
 
 
+function fn_ship_extended_checkout_select_default_payment_method(&$cart, &$payment_methods, $completed_steps)
+{
+
+	if(isset($cart['chosen_shipping']) && is_array($cart['chosen_shipping']) && count($cart['chosen_shipping']) == 1) {
+		$chosen_shipping = reset($cart['chosen_shipping']);
+
+		$disable_payments = db_get_field("SELECT disable_payments FROM ?:shippings WHERE shipping_id = ?i", $chosen_shipping);
+
+		if ($disable_payments != 0) {
+	        $disable_payments = explode(',',$disable_payments);
+
+	        $new_payment_groups = array();
+			foreach($payment_methods as $tab => $group) {
+				foreach($group as $payment_id => $payment) {
+					$search = array_search($payment['payment_id'], $disable_payments);
+					if($search === false) {
+						$new_payment_methods[$tab][$payment_id] = $payment;
+					}
+				}
+			}
+
+			if(!empty($new_payment_methods)) {
+				$payment_methods = $new_payment_methods;
+			} else {
+				$cart['payment_id'] = 0;
+			}
+		}
+	}
+
+}
+

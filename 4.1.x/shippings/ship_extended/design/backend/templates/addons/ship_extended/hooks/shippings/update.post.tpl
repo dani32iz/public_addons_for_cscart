@@ -5,4 +5,12 @@
         <textarea id="elm_shipping_data_full_descr" name="shipping_full_descr" cols="55" rows="8" class="cm-wysiwyg input-large">{$shipping_full_descr}</textarea>
     </div>
 </div>
+
+<div class="control-group">
+    <label class="control-label">{__("ship_extended.disable_payments")}</label>
+    <div class="controls">
+        {include file="common/selectable_box.tpl" name="disable_payments" id="1234" fields=$payments selected_fields=$disable_payments}
+    </div>
+</div>
+
 {/if}

@@ -17,7 +17,8 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 use Tygh\Registry;
 
 fn_trusted_vars (
-    'shipping_full_descr'
+    'shipping_full_descr',
+    'shipping_free_text'
 );
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -31,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $shipping_full_descr = array(
             	'full_description' => $_REQUEST['shipping_full_descr'],
+                'free_text' => $_REQUEST['shipping_free_text'],
             );
 
             $shippings_data = array(
@@ -51,6 +53,9 @@ if ($mode == 'update') {
 	if (!empty($_REQUEST['shipping_id'])) {
 		$shipping_full_descr = db_get_field("SELECT full_description FROM ?:shipping_descriptions WHERE shipping_id = ?i AND lang_code =?s", $_REQUEST['shipping_id'], DESCR_SL );
 		Registry::get('view')->assign('shipping_full_descr', $shipping_full_descr);
+
+        $shipping_free_text = db_get_field("SELECT free_text FROM ?:shipping_descriptions WHERE shipping_id = ?i AND lang_code =?s", $_REQUEST['shipping_id'], DESCR_SL );
+        Registry::get('view')->assign('shipping_free_text', $shipping_free_text);
 
         $disable_payments = db_get_field("SELECT disable_payments FROM ?:shippings WHERE shipping_id = ?i", $_REQUEST['shipping_id']);
         $disable_payments = explode(',',$disable_payments);

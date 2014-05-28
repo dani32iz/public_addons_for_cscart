@@ -36,13 +36,16 @@
 
     <queries>
         <item>ALTER TABLE  `?:shipping_descriptions` ADD `full_description` MEDIUMTEXT CHARACTER SET utf8 NOT NULL</item>
+        <item>ALTER TABLE  `?:shipping_descriptions` ADD `free_text` varchar(255) CHARACTER SET utf8 NOT NULL</item>
         <item>ALTER TABLE  `?:shippings` ADD `disable_payments` varchar(255) NOT NULL DEFAULT '0'</item>
         <item for="uninstall">ALTER TABLE  `?:shipping_descriptions` DROP  `full_description`</item>
+        <item for="uninstall">ALTER TABLE  `?:shipping_descriptions` DROP  `free_text`</item>
         <item for="uninstall">ALTER TABLE  `?:shippings` DROP  `disable_payments`</item>
     </queries>
     <translations>
     </translations>
     <language_variables>
+        <item lang="ru" id="ship_extended.free_text">Текст для бесплатной доставки.</item>
         <item lang="ru" id="ship_extended.disable_payments">Заблокировать способы оплаты</item>
     </language_variables>
 </addon>

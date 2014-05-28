@@ -7,15 +7,15 @@
         {foreach from=$product_groups key="group_key" item=group name="spg"}
             {* Group name *}
             {if !"ULTIMATE"|fn_allowed_for || $product_groups|count > 1}
-                <span class="vendor-name">{$group.name}</span>
+                <span class="ty-shipping-options__vendor-name">{$group.name}</span>
             {/if}
 
             {* Products list *}
             {if !"ULTIMATE"|fn_allowed_for || $product_groups|count > 1}
-                <ul class="bullets-list">
+                <ul class="ty-shipping-options__products">
                     {foreach from=$group.products item="product"}
                         {if !(($product.is_edp == 'Y' && $product.edp_shipping != 'Y') || $product.free_shipping == 'Y')}
-                            <li>
+                            <li class="ty-shipping-options__products-item">
                                 {if $product.product}
                                     {$product.product nofilter}
                                 {else}
@@ -60,7 +60,7 @@
                         {if $shipping.inc_tax}
                             {assign var="rate" value="`$rate` ("}
                             {if $shipping.taxed_price && $shipping.taxed_price != $shipping.rate}
-                                {capture assign="tax"}{include file="common/price.tpl" value=$shipping.taxed_price class="nowrap"}{/capture}
+                                {capture assign="tax"}{include file="common/price.tpl" value=$shipping.taxed_price class="ty-nowrap"}{/capture}
                                 {assign var="rate" value="`$rate` (`$tax` "}
                             {/if}
                             {assign var="inc_tax_lang" value=__('inc_tax')}
@@ -72,9 +72,9 @@
 
                     {hook name="checkout:shipping_rate"}
                     {if $display == "radio"}
-                        <p class="shipping-options-method">
-                            <input type="radio" class="valign" id="sh_{$group_key}_{$shipping.shipping_id}" name="shipping_ids[{$group_key}]" value="{$shipping.shipping_id}" onclick="fn_calculate_total_shipping_cost();" {$checked} />
-                            <label for="sh_{$group_key}_{$shipping.shipping_id}" class="valign">{$shipping.shipping} {$delivery_time} - {$rate nofilter}</label>
+                        <p class="ty-shipping-options__method">
+                            <input type="radio" class="ty-valign" id="sh_{$group_key}_{$shipping.shipping_id}" name="shipping_ids[{$group_key}]" value="{$shipping.shipping_id}" onclick="fn_calculate_total_shipping_cost();" {$checked} />
+                            <label for="sh_{$group_key}_{$shipping.shipping_id}" class="ty-valign">{$shipping.shipping} {$delivery_time} - {$rate nofilter}</label>
                         </p>
 
                     {elseif $display == "select"}
@@ -86,7 +86,7 @@
                             </p>
                     {/if}
                     {/hook}
-
+                    
                 {/foreach}
 
                 {if $display == "select"}
@@ -95,7 +95,7 @@
                 {/if}
 
                 {if $smarty.foreach.spg.last && !$group.all_edp_free_shipping && !($group.all_free_shipping || $group.free_shipping)}
-                    <p class="shipping-options-total">{__("total")}:&nbsp;{include file="common/price.tpl" value=$cart.display_shipping_cost class="price"}</p>
+                    <p class="ty-shipping-options__total">{__("total")}:&nbsp;{include file="common/price.tpl" value=$cart.display_shipping_cost class="ty-price"}</p>
                 {/if}
 
             {else}
@@ -104,7 +104,7 @@
                 {elseif $group.all_edp_free_shipping || $group.shipping_no_required }
                     <p>{__("no_shipping_required")}</p>
                 {else}
-                    <p class="error-text">
+                    <p class="ty-error-text">
                         {if $display == "show"}
                             <strong>{__("text_no_shipping_methods")}</strong>
                         {else}

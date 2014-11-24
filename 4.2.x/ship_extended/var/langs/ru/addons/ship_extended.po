@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: crowdin.com\n"
+"Last-Translator: cscart <zeke@cs-cart.com>\n"
+"PO-Revision-Date: 2014-08-14 04:01-0400\n"
+
+msgctxt "Addons::name::ship_extended"
+msgid ":) Extension for shipping methods"
+msgstr ":) Расширение способов доставки"
+
+msgctxt "Addons::description::ship_extended"
+msgid "Adds an extended description for shipping method and displays it on the checkout page. Allows you to select the payment methods that are not available with this method of delivery"
+msgstr "Добавляет расширенное описание для способа доставки и отображает его на странице оформления заказа. Позволяет выбрать способы оплаты, которые будут недоступны с данным способом доставки"
+
+msgctxt "SettingsSections::ship_extended::general"
+msgid "General"
+msgstr "Настройки модуля"
+
+msgctxt "SettingsOptions::ship_extended::view_type"
+msgid "View display a complete description of"
+msgstr "Вид отображения полного описания"
+
+msgctxt "SettingsVariants::ship_extended::view_type::click"
+msgid "Link 'View more'"
+msgstr "Ссылка 'Показать больше' открывающая блок"
+
+msgctxt "SettingsVariants::ship_extended::view_type::popup"
+msgid "Popup"
+msgstr "Всплывающее окно"
+
+msgctxt "SettingsVariants::ship_extended::view_type::default"
+msgid "Default"
+msgstr "Открытый блок"
+
+msgctxt "Languages::ship_extended.disable_payments"
+msgid "Block payment methods"
+msgstr "Выключить способы оплаты"
+
+msgctxt "Languages::selected_fields"
+msgid "Selected fields"
+msgstr "Выбранные"
+
+

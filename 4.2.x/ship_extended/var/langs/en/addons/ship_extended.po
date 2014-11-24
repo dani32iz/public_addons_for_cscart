@@ -1,0 +1,42 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::ship_extended"
+msgid ":) Extension for shipping methods"
+msgstr ":) Extension for shipping methods"
+
+msgctxt "Addons::description::ship_extended"
+msgid "Adds an extended description for shipping method and displays it on the checkout page. Allows you to select the payment methods that are not available with this method of delivery"
+msgstr "Adds an extended description for shipping method and displays it on the checkout page. Allows you to select the payment methods that are not available with this method of delivery"
+
+msgctxt "SettingsSections::ship_extended::general"
+msgid "General"
+msgstr "General"
+
+msgctxt "SettingsOptions::ship_extended::view_type"
+msgid "View display a complete description of"
+msgstr "View display a complete description of"
+
+msgctxt "SettingsVariants::ship_extended::view_type::click"
+msgid "Link 'View more'"
+msgstr "Link 'View more'"
+
+msgctxt "SettingsVariants::ship_extended::view_type::popup"
+msgid "Popup"
+msgstr "Popup"
+
+msgctxt "SettingsVariants::ship_extended::view_type::default"
+msgid "Default"
+msgstr "Default"
+
+msgctxt "Languages::ship_extended.disable_payments"
+msgid "Block payment methods"
+msgstr "Block payment methods"
+
+msgctxt "Languages::selected_fields"
+msgid "Selected fields"
+msgstr "Selected fields"
+

@@ -1,0 +1,1 @@
+{style src="addons/ship_extended/styles.less"}

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>ship_extended</id>
+    <version>1.0</version>
+    <priority>4294967294</priority>
+    <position>0</position>
+    <status>active</status>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <default_language>ru</default_language>
+
+    <settings edition_type="ROOT,ULT:VENDOR">
+         <sections>
+            <section id="general">
+                    <items>
+                        <item id="view_type">
+                        <type>radiogroup</type>
+                        <default_value>click</default_value>
+                        <variants>
+                            <item id="click">
+                            </item>
+                            <item id="popup">               
+                            </item>
+                            <item id="default">               
+                            </item>
+                        </variants>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+    <queries>
+        <item for="install">
+            ALTER TABLE  `?:shipping_descriptions` ADD `full_description` MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+        </item>
+        <item for="install">
+            ALTER TABLE  `?:shippings` ADD `disable_payments` varchar(255) NOT NULL DEFAULT '0';
+        </item>
+        <item for="uninstall">ALTER TABLE  `?:shipping_descriptions` DROP  `full_description` ;</item>
+        <item for="uninstall">ALTER TABLE  `?:shippings` DROP  `disable_payments` ;</item>
+    </queries>
+</addon>

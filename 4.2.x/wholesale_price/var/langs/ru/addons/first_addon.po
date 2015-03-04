@@ -1,0 +1,29 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: ru_RU"
+
+msgctxt "Addons::name::first_addon"
+msgid "First addon"
+msgstr "Первый модуль"
+
+msgctxt "Addons::description::first_addon"
+msgid "Description (first_addon)"
+msgstr "Описание первого модуля"
+
+msgctxt "Languages::wholesale_text"
+msgid "Wholesale price from"
+msgstr "Оптом от "
+
+msgctxt "SettingsSections::first_addon::general"
+msgid "General"
+msgstr "Общие"
+
+msgctxt "SettingsOptions::first_addon::general"
+msgid "General"
+msgstr "Общие"
+
+msgctxt "SettingsOptions::first_addon::wholesale_usergroups"
+msgid "Wholesale usergroups"
+msgstr "Группы пользователей для отображения оптовой цены"

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>first_addon</id>
+    <version>1.0</version>
+    <priority>4294967294</priority>
+    <position>0</position>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <status>active</status>
+    <default_language>en</default_language>
+
+    <settings edition_type="ROOT,ULT:VENDOR">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="general">
+                        <type>header</type>
+                    </item>
+                    <item id="wholesale_usergroups">
+                        <type>input</type>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+</addon>
+
+

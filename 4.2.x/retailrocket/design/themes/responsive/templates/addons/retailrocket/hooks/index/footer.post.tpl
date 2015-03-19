@@ -1,21 +1,5 @@
 <!-- RetailRocket -->
 
-{if $product.product_id && $runtime.controller == 'products' && $runtime.mode == 'view'}
-    <script type="text/javascript">
-    rrApiOnReady.push(function() {
-    try{ rrApi.view({$product.product_id}); } catch(e) {}
-    })
-    </script>
-{/if}
-
-{if $runtime.controller == 'categories' && $runtime.mode == 'view'}
-    <script type="text/javascript">
-    rrApiOnReady.push(function() {
-    try { rrApi.categoryView({$category_data.category_id}); } catch(e) {}
-    })
-    </script>
-{/if}
-
 <script>
     var rrPartnerId = "{$addons.retailrocket.partner_id}";
     var rrApi = {};
@@ -33,5 +17,47 @@
     ref.parentNode.insertBefore(apiJs, ref);
     }(document));
 </script>
+
+{if $product.product_id && $runtime.controller == 'products' && $runtime.mode == 'view'}
+    <!-- Products -->
+    <script type="text/javascript">
+    rrApiOnReady.push(function() {
+    try{ rrApi.view({$product.product_id}); } catch(e) {}
+    })
+    </script>
+{/if}
+
+{if $runtime.controller == 'categories' && $runtime.mode == 'view'}
+
+    <!-- Categories -->
+    <script type="text/javascript">
+    rrApiOnReady.push(function() {
+    try { rrApi.categoryView({$category_data.category_id}); } catch(e) {}
+    })
+    </script>
+{/if}
+
+{if $order_info && $runtime.controller == 'checkout' && $runtime.mode == 'complete'}
+<!-- RetailRocket order confirmation -->
+<script type="text/javascript">
+    rrApiOnReady.push(function() {
+        try {
+            rrApi.order({
+                transaction: {$order_info.order_id},
+                    items: [
+                    {foreach from=$order_info.products item=products}
+                        { 
+                            id: {$products.product_id},
+                            qnt: {$products.amount}, 
+                            price: {$products.price}
+                        },
+                    {/foreach}
+                    ]
+            });
+        } catch(e) {}
+    })
+</script>
+
+{/if}
 
 <!-- /RetailRocket -->

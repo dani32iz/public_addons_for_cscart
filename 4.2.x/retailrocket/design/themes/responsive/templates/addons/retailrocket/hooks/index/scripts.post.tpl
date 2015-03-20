@@ -1,1 +1,0 @@
-{script src="js/addons/retailrocket/func.js"}

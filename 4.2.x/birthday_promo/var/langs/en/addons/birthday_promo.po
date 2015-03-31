@@ -1,0 +1,17 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::birthday_promo"
+msgid "Birthday promo"
+msgstr ":) Birthday promo"
+
+msgctxt "Addons::description::birthday_promo"
+msgid "Birthday promo description"
+msgstr "New promotions condition"
+
+msgctxt "Languages::promotion_cond_birthday"
+msgid "Birthday"
+msgstr "Birthday"

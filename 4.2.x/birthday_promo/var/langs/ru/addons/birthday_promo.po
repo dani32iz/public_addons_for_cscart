@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::birthday_promo"
+msgid "Birthday promo"
+msgstr ":) Скидка в День рождения!"
+
+msgctxt "Addons::description::birthday_promo"
+msgid "Birthday promo description"
+msgstr "Добавляет новое условие промо-акции"
+
+msgctxt "Languages::promotion_cond_birthday"
+msgid "Birthday"
+msgstr "День рождения!"
+
+
+

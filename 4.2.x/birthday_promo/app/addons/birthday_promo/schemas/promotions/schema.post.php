@@ -12,16 +12,12 @@
 * "copyright.txt" FILE PROVIDED WITH THIS DISTRIBUTION PACKAGE.            *
 ****************************************************************************/
 
-use Tygh\Registry;
-
-if (Registry::get('addons.age_verification.status') == 'A') {
-    if (!fn_allowed_for('ULTIMATE:FREE')) {
-        $scheme['conditions']['birthday'] = array(
-            'type' => 'statement',
-            'field_function' => array('fn_birthday_promo_condition', '@auth'),
-            'zones' => array('cart')
-        );
-    }
+if (!fn_allowed_for('ULTIMATE:FREE')) {
+    $scheme['conditions']['birthday'] = array(
+        'type' => 'statement',
+        'field_function' => array('fn_birthday_promo_condition', '@auth'),
+        'zones' => array('cart')
+    );
 }
 
 return $scheme;

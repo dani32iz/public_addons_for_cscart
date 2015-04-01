@@ -4,7 +4,13 @@
     <version>1.0</version>
     <priority>4294967294</priority>
     <position>0</position>
-    <status>active</status>
     <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
     <default_language>en</default_language>
+
+    <status>active</status>
+
+    <compatibility>
+        <dependencies>age_verification</dependencies>
+    </compatibility>
+
 </addon>

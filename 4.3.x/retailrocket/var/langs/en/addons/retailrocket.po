@@ -1,0 +1,23 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::retailrocket"
+msgid "RetailRocket"
+msgstr ":) RetailRocket"
+
+msgctxt "Addons::description::retailrocket"
+msgid "Retailrocket description"
+msgstr "Retailrocket description"
+
+msgctxt "SettingsSections::retailrocket::general"
+msgid "General"
+msgstr "General"
+
+msgctxt "SettingsOptions::retailrocket::partner_id"
+msgid "Retail partner id"
+msgstr "Partner id"
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>retailrocket</id>
+
+    <version>1.0</version>
+    <priority>2400</priority>
+    <position>140</position>
+    <status>active</status>
+    <default_language>en</default_language>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="partner_id">
+                        <type>input</type>
+                        <default_value/>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+    <queries>
+    </queries>
+
+</addon>

@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::retailrocket"
+msgid "RetailRocket"
+msgstr ":) RetailRocket"
+
+msgctxt "Addons::description::retailrocket"
+msgid "Retailrocket description"
+msgstr "Retailrocket описание"
+
+msgctxt "SettingsSections::retailrocket::general"
+msgid "General"
+msgstr "Настройки"
+
+msgctxt "SettingsOptions::retailrocket::partner_id"
+msgid "Retail partner id"
+msgstr "ID партнёра RetailRocket"
+
+
